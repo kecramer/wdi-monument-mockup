@@ -91,6 +91,7 @@ nav ul li {
    background-image: url('../images/home_header_bg.jpg');
    background-size: cover;
    background-repeat: no-repeat;
+   background-position: center;
    width: 100%;
    display: flex;
    justify-content: center;
@@ -98,14 +99,16 @@ nav ul li {
    margin-top: 40px;
    position: fixed;
    z-index: -1;
+   max-height: 30em;
 }
 
 #headerbg img, .spacer img {
    width: 100%;
    opacity: 0;
+   max-height: 30em;
 }
 
-#headerbg .headertext, .spacer .headertext {
+#headerbg .headertext {
    padding: 0;
    margin: 0;
    text-align: center;
@@ -312,6 +315,12 @@ input, textarea {
    margin-top: 1em;
 }
 
+.contentbox input[type="text"], .contentbox textarea {
+   padding: 1em;
+   margin-bottom: 1em;
+   text-align: left;
+}
+
 .images {
    display: flex;
    flex-direction: column;
@@ -330,6 +339,14 @@ input, textarea {
 
 .abstract p {
    font-size: 0.8em;
+}
+
+.w30p {
+   width: 30%;
+}
+
+.w100p {
+   width: 100%;
 }
 
 @media only screen and (max-width: 490px) {
@@ -354,5 +371,31 @@ input, textarea {
 
    .contentbox {
       justify-content: space-around;
+   }
+}
+
+@media only screen and (max-width: 524px) {
+   .emailinput, .submit {
+      width: 100%;
+      /* height: 3.5em; */
+      margin-bottom: 1em;
+   }
+
+   input {
+      height: 3.5em;
+   }
+
+   .byline p {
+      line-height: 3.5em;
+   }
+
+   .connect {
+      height: 11.5em;
+   }
+}
+
+@media only screen and (max-width: 620px) {
+   .contentbox .w30p {
+      width: 100%;
    }
 }

@@ -1,0 +1,316 @@
+/* THIS SECTION COPIED FROM SOLUTION CODE (INSTEAD OF TRYING TO
+   EXPERIMENTALY DETERMINE FONT COLORS, WEIGHT, SIZES) */
+
+body {
+   font-family: Verdana, sans-serif;
+   color: #44545E;
+   box-sizing: border-box;
+}
+
+p {
+	font-family: 'Lato', sans-serif;
+	text-transform: none;
+	line-height: 1.4;
+   font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+   font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+   text-transform: uppercase; /*ADDED*/
+}
+
+h1 {
+	font-size: 2.678em; /* Changed to em */
+	letter-spacing: .8rem;
+}
+
+h4 {
+   text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #7B98AA;
+	font-weight: 600;
+	/* transition: all .3s ease-in-out; */
+}
+
+a:hover {
+	color: #44545E;
+   /* When :hover is not applied, this transition occurs on page load */
+   transition: all .2s ease-in-out;
+}
+
+/* END COPIED SECTION */
+
+.sidebarsection {
+   padding-bottom: 1.5em;
+}
+
+/* HEADER CSS */
+
+nav {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   background: white;
+   z-index: 10;
+   border-bottom: 1px solid #44545E;
+}
+
+.center {
+   width: 30em;
+   margin: 0 auto;
+}
+
+nav ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 0;
+   padding: 0.75em 0;
+}
+
+nav ul li {
+   text-transform: uppercase;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 600;
+}
+
+.hamburger {
+   position: absolute;
+   top: -100px;
+   left: -100px;
+}
+
+/* https://stackoverflow.com/questions/30035530/scale-div-to-fit-background-image */
+#headerbg {
+   background-image: url('../images/blog_header_bg.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 40px;
+}
+
+#headerbg img {
+   width: 100%;
+   opacity: 0;
+}
+
+#headerbg h1 {
+   padding: 0;
+   margin: 0;
+   text-align: center;
+   color: white;
+   letter-spacing: 8px;
+   position: absolute;
+}
+
+/* ARTICLES CSS */
+
+.corset {
+   width: 90%;
+   max-width: 60em;
+   margin: 0 auto;
+   display: flex;
+}
+
+main {
+   max-width: 40em;
+   padding-right: 2em;
+}
+
+aside {
+   max-width: 20em;
+   padding-left: 2em;
+   margin-top: 7em;
+}
+
+img {
+   max-width: 100%;
+}
+
+article header {
+   padding: 2em 0;
+}
+
+article section * {
+   padding-bottom: 1em;
+}
+
+article footer {
+   padding-bottom: 2em;
+}
+
+article footer form {
+   width: 100%;
+}
+
+article footer form * {
+   margin: .25em 0;
+   text-align: left;
+   padding: 1em;
+}
+
+/* PAGE FOOTER CSS */
+
+.pagefooter {
+   background: #CDF3F6; /* TAKEN FROM SOLUTION */
+   height: 15em;
+}
+
+#recent ul li {
+   list-style-type: disc;
+   margin-left: 1.5em;
+   padding-bottom: 0.2em;
+}
+
+/*FOLLOWING TWO ARE THE SAME AS NAV CSS - COMBINE?*/
+.connect {
+   width: 100%;
+   margin: 0 auto;
+   height: 11em;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.connect div {
+   padding: 0.33em;
+}
+
+.social ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin: 0;
+   /* padding: 0.7em 0; */
+}
+
+.social ul li {
+   padding: 0 1em;
+   font-size: 200%;
+}
+
+.contactform {
+   max-width: 40em;
+   width: 100%;
+   /* max-width: 36em; */
+   /* min-width: 35em; */
+   margin: 0 auto;
+}
+
+.contactform form {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   /* align-items: center; */
+   flex-wrap: wrap;
+}
+
+.contactform * {
+   margin: 0 0.75em;
+}
+
+.social ul li a {
+   color: #44545E;
+}
+
+.fab:hover {
+   transition: all .3s ease-in-out;
+}
+
+.fa-facebook-square:hover {
+   color: #3b5998;
+}
+
+.fa-twitter-square:hover {
+   color: #1DA1F2;
+}
+
+.fa-instagram:hover {
+   color: #cd486b;
+}
+
+input, textarea {
+   color: #44545E;
+   text-align: center;
+   border: 1px solid #44545E;
+   width: 100%;
+   font-size: .8em;
+}
+
+.emailinput {
+   width: 56%;
+   height: 3em;
+}
+
+.submit {
+   background: #00000000;
+   width: 37%;
+   height: 3em;
+}
+
+.submit:hover {
+   background: #44545E;
+   transition: all .3s ease-in-out;
+   color: #dddddd;
+}
+
+.byline {
+   border-top: 1px solid #44545E;
+   text-align: center;
+}
+
+.byline p {
+   line-height: 4em;
+   margin: 0;
+}
+
+@media only screen and (max-width: 720px) {
+   aside {
+      display: none;
+   }
+
+   main {
+      max-width: 100%;
+      padding-right: 0;
+   }
+}
+
+@media only screen and (max-width: 524px) {
+   .emailinput, .submit {
+      width: 100%;
+      height: 3.5em;
+      margin-bottom: 1em;
+   }
+
+   .byline p {
+      line-height: 3.5em;
+   }
+
+   .connect {
+      height: 11.5em;
+   }
+}
+
+@media only screen and (max-width: 490px) {
+   .hamburger {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+   }
+
+   header nav {
+      display: none;
+   }
+
+   #headerbg {
+      margin-top: 0;
+   }
+}

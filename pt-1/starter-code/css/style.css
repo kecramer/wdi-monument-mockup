@@ -326,11 +326,22 @@ input, textarea {
    flex-direction: column;
    flex-wrap: nowrap;
    justify-content: flex-start;
+}
+
+.images.wide {
    width: 30%
+}
+
+.images.narrow {
+   width: 48%;
 }
 
 .image {
    padding-bottom: 0.6em;
+}
+
+.narrow {
+   display: none;
 }
 
 .abstract {
@@ -391,6 +402,14 @@ input, textarea {
 
    .connect {
       height: 11.5em;
+   }
+
+   .wide {
+      display: none;
+   }
+
+   .narrow {
+      display: block;
    }
 }
 

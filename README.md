@@ -6,3 +6,4 @@
 
 [Go to part 3!](pt-3/)  
 
+[Solution lives here](pt-1/starter_code/)
